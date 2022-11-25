@@ -1,0 +1,20 @@
+.InscriptionForm{
+    width: 500px;
+    height: 550px;
+    padding: 10px;
+    margin-top: 30px;
+    margin-left: 400px;
+    border:  black 2px solid;
+    border-radius: 10px;
+    background-color: white;
+
+}
+body{
+    background: url(../images/backg.jpg) ;
+}
+h1,h5{
+    text-align: center;
+}
+h5{
+    color: red;
+}
