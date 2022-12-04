@@ -13,7 +13,7 @@ try
         }
         else
         {
-            $query = "SELECT * FROM etudiant WHERE email = :email AND password = :password";
+            $query = "SELECT * FROM admin WHERE email = :email AND password = :password";
             $conn=Connection_DB::getConnection();
             $statement = $conn->prepare($query);
             $statement->execute(
@@ -26,19 +26,12 @@ try
             if($count > 0)
             {
                 $mail=$_POST["email"];
-                $stmt = $conn->prepare("SELECT id,nom,prenom,idVille,date_naissance,cin,cne FROM etudiant WHERE email=?");
+                $stmt = $conn->prepare("SELECT nom,prenom FROM admin WHERE email=?");
                 $stmt->execute([$mail]);
-                $currentUser = $stmt->fetch();
-                $_SESSION['currentUserName']= $currentUser['nom'];
-                $_SESSION['currentUserNom']= $currentUser['nom'];
-                $_SESSION['currentUserId']= $currentUser['id'];
-                $_SESSION['currentUserPrenom']= $currentUser['prenom'];
-                $_SESSION['currentUserVille']= $currentUser['idVille'];
-                $_SESSION['currentUserDateNaissance']= $currentUser['date_naissance'];
-                $_SESSION['currentUserCin']= $currentUser['cin'];
-                $_SESSION['currentUserCne']= $currentUser['cne'];
-
-                header("location: home.php");
+                $currentAdmin = $stmt->fetch();
+                $_SESSION['currentAdminNom']= $currentAdmin['nom'];
+                $_SESSION['currentAdminPrenom']= $currentAdmin['prenom'];
+                header("location: adminHome.php");
             }
             else
             {
@@ -52,10 +45,11 @@ catch(PDOException $error)
     $message = $error->getMessage();
 }
 ?>
-<html lang="en" style="position: sticky;"><head>
+<html lang="fr" style="position: sticky;"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home</title>
+    <title>Admin Login</title>
+    <link rel="icon" href="ESTS-LOGO-2021-NOUVEAU.png">
     <link rel="stylesheet" href="assets2/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets2/css/Navbar-With-Button-icons.css">
 
@@ -79,7 +73,7 @@ catch(PDOException $error)
     <div class="container">
         <div class="row mb-5">
             <div class="col-md-8 col-xl-6 text-center mx-auto">
-                <h2>Accéder à la plateforme de préinscription</h2>
+                <h2>Accéder à l'espace admin de la plateforme de préinscription EST SAFI</h2>
                 <p class="w-lg-50"></p>
             </div>
         </div>
@@ -100,7 +94,6 @@ catch(PDOException $error)
                             <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email" style="width: 244.004px;"></div>
                             <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="Mot de Passe" style="width: 244.004px;"></div>
                             <div class="mb-3"><button class="btn btn-primary shadow d-block w-60" type="submit" name="login" style="width: 121.722px;margin-left: 61px;font-size: 14px;">Se Connecter</button></div>
-                           <a class="text-muted" href="register.php">Vous n'avez pas de compte ?</a>
                         </form>
                     </div>
                 </div>
@@ -148,4 +141,5 @@ catch(PDOException $error)
 
 
 </body></html>
+
 

@@ -1,7 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b11c7e0-5464-4d99-9adb-f769f9761aa6" name="Changes" comment="" />
+    <list default="true" id="8b11c7e0-5464-4d99-9adb-f769f9761aa6" name="Changes" comment="comm">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adminHome.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adminLogin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/Countdown-styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/Countdown.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/Footer-Clean-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/Navbar-With-Button-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/styles.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/photo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/Countdown-1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/Countdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/bold-and-bright.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets2/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets2/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets2/css/Countdown-styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets2/css/Countdown.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets2/css/Footer-Clean-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets2/css/Navbar-With-Button-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets2/img/brands/instacart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets2/img/brands/kickstarter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets2/img/brands/lyft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets2/img/brands/pinterest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets2/img/brands/shopify.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets2/img/brands/twitter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets2/img/products/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets2/img/products/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets2/img/products/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets2/img/team/avatar2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets2/img/team/avatar4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets2/img/team/avatar5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets2/js/Countdown-1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets2/js/Countdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets2/js/bold-and-bright.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-brands-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-brands-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-brands-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-regular-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-regular-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-regular-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-solid-900.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-solid-900.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-solid-900.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/fonts/fontawesome-all.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/img/avatars/avatar1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/img/avatars/avatar2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/img/avatars/avatar3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/img/avatars/avatar4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/img/avatars/avatar5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/img/dogs/image2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/img/dogs/image3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/js/bs-init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/js/chart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets3/js/theme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/candidatures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/listeAdmis.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/listeCandidatures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7cb9be4b-9a86-4c8a-9a54-bbe84886d330.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7cb9be4b-9a86-4c8a-9a54-bbe84886d330.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Connection_DB.php" beforeDir="false" afterPath="$PROJECT_DIR$/Connection_DB.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Insertion.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/products/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/products/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/products/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets2/img/ESTS-LOGO-2021-NOUVEAU.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/team/avatar2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/team/avatar4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/team/avatar5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/backg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles.min.css" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,28 +125,45 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2HsJtTbg6eQiBbDXkd4PUObFAeH" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\ProjectPHP" />
+      <recent name="C:\wamp64\www\ProjectPHP\assets\img" />
+      <recent name="C:\wamp64\www\ProjectPHP\assets\img\dogs" />
       <recent name="C:\wamp64\www\ProjectPHP\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ProjectPHP\admin" />
       <recent name="C:\wamp64\www\ProjectPHP" />
       <recent name="C:\wamp64\www\ProjectPHP\images" />
     </key>
@@ -76,8 +182,31 @@
       <workItem from="1669113414519" duration="750000" />
       <workItem from="1669325200211" duration="10120000" />
       <workItem from="1669390292149" duration="4617000" />
-      <workItem from="1669404042434" duration="958000" />
+      <workItem from="1669404042434" duration="3968000" />
+      <workItem from="1669462378079" duration="13176000" />
+      <workItem from="1669504392015" duration="2218000" />
+      <workItem from="1669585384529" duration="1780000" />
+      <workItem from="1669630355358" duration="9551000" />
+      <workItem from="1669676141579" duration="7930000" />
+      <workItem from="1669720080650" duration="3954000" />
+      <workItem from="1669729737975" duration="6442000" />
+      <workItem from="1669747415553" duration="14961000" />
+      <workItem from="1669897035517" duration="7464000" />
+      <workItem from="1670010959791" duration="1728000" />
+      <workItem from="1670019855326" duration="13458000" />
+      <workItem from="1670034084203" duration="37000" />
+      <workItem from="1670159960083" duration="96000" />
+      <workItem from="1670160103391" duration="8656000" />
+      <workItem from="1670174216479" duration="13593000" />
     </task>
+    <task id="LOCAL-00001" summary="comm">
+      <created>1669405236120</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669405236120</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,5 +222,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="comm" />
+    <option name="LAST_COMMIT_MESSAGE" value="comm" />
   </component>
 </project>

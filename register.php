@@ -4,17 +4,19 @@ $alert="";
 require("Connection_DB.php");
 if(isset($_POST["signup"])){
 
-    if(!empty($_POST["nom"]) && !empty($_POST["prenom"]) && !empty($_POST["dateNaissance"]) && !empty($_POST["email"]) && !empty($_POST["ville"]) && !empty($_POST["password"]) && !empty($_POST["phone"])) {
+    if(!empty($_POST["nom"]) && !empty($_POST["prenom"]) && !empty($_POST["dateNaissance"]) && !empty($_POST["email"]) && !empty($_POST["ville"]) && !empty($_POST["password"]) && !empty($_POST["phone"] ) && !empty($_POST["cin"] )&& !empty($_POST["cne"] ) ) {
         $prenom = $_POST["prenom"];
         $password = $_POST["password"];
         $nom = $_POST["nom"];
         $email = $_POST["email"];
         $phone = $_POST["phone"];
         $ville = $_POST["ville"];
+        $cin = $_POST["cin"];
+        $cne = $_POST["cne"];
         $dateNaissance = $_POST["dateNaissance"];
         $conn=Connection_DB::getConnection();
-        $stm=$conn->prepare("INSERT INTO `etudiant` (`id`, `nom`, `prenom`, `ville`, `email`, `password`, `date_naissance`, `num_tel`) VALUES (null , ?, ?, ?, ?, ?, ?, ?);");
-        $res=$stm->execute([$nom,$prenom,$ville,$email,$password,$dateNaissance,$phone]);
+        $stm=$conn->prepare("INSERT INTO `etudiant` (`id`, `nom`, `prenom`, `idVille`, `email`, `password`, `date_naissance`, `num_tel`, `cin` , `cne`) VALUES (null , ?, ?, ?, ?, ?, ?, ? , ? , ?);");
+        $res=$stm->execute([$nom,$prenom,$ville,$email,$password,$dateNaissance,$phone,$cin,$cne]);
         if ($res){
             $_SESSION['currentUserName']=$nom.$prenom;
             header("Location: Home.php");
@@ -28,104 +30,86 @@ if(isset($_POST["signup"])){
         $alert="Veuillez remplir tous les champs soigneusement";
     }
 } ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>PréInscription</title>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Création de Compte</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee&amp;display=swap">
+    <link rel="stylesheet" href="/Footer-Clean-icons.css">
 </head>
+
 <body>
-<h1 >Bienvenue à la plateforme de Préinscription de l'EST SAFI</h1>
-<h5 >--Veulliez Créer votre Compte pour importer vos documents--</h5>
-<div class="InscriptionForm">
-    <?php echo "<p style='color: red'>".$alert."</p>"?>
-<form method="post" action="">
-  <label for="nom" class="form-label">Nom</label>
-    <div class="input-group mb-3">
-        <input type="text"   name="nom" class="form-control" >
+<nav class="navbar navbar-light navbar-expand-md sticky-top navbar-shrink py-3" id="mainNav" style="height: 67.976px;">
+    <div class="container"><img class="img-fluid" style="margin: -1px 259px -1px -1px;" height="104" width="97" src="assets/img/ESTS-LOGO-2021-NOUVEAU.png"><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <p class="lead" style="margin-bottom: 42px;margin-top: 46px;margin-right: -603px;width: 268.994px;color: rgb(0,0,0);font-size: 15px;">Vous possédez déjà un compte ?</p>
+                </li>
+            </ul><a class="btn btn-primary shadow" role="button" href="login.php" style="margin-left: -130px;">Se Connecter</a>
+        </div>
     </div>
-    <label for="prenom" class="form-label">Prenom</label>
-    <div class="input-group mb-3">
-        <input type="text"  name="prenom" class="form-control"  >
+</nav>
+<section class="py-5">
+    <div class="container py-5">
+        <div class="row mb-4 mb-lg-5">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <p class="fw-bold text-success mb-2"></p>
+                <h3 class="fw-bold">Créer Compte</h3>
+            </div>
+        </div>
     </div>
-    <label for="ville" class="form-label">Ville</label>
-    <div class="input-group mb-3">
-        <select type="text"  name="ville" class="form-control" >
-            <option SELECTED>Choisissez votre Ville</option>
+</section>
+<section class="position-relative py-4 py-xl-5" style="margin-top: -134px;">
+    <div class="InscriptionForm">
+        <?php echo "<p style='color: red'>".$alert."</p>"?>
 
-                <option value="Agadir">Agadir</option>
-                <option value="Al Hoceima">Al Hoceima</option>
-                <option value="Azilal">Azilal</option>
-                <option value="Beni Mellal">Beni Mellal</option>
-                <option value="Ben Slimane">Ben Slimane</option>
-                <option value="Boulemane">Boulemane</option>
-                <option value="Casablanca">Casablanca</option>
-                <option value="Chaouen">Chaouen</option>
-                <option value="El Jadida">El Jadida</option>
-                <option value="El Kelaa des Sraghna">El Kelaa des Sraghna</option>
-                <option value="Er Rachidia">Er Rachidia</option>
-                <option value="Essaouira">Essaouira</option>
-                <option value="Fes">Fes</option>
-                <option value="Figuig">Figuig</option>
-                <option value="Guelmim">Guelmim</option>
-                <option value="Ifrane">Ifrane</option>
-                <option value="Kenitra">Kenitra</option>
-                <option value="Khemisset">Khemisset</option>
-                <option value="Khenifra">Khenifra</option>
-                <option value="Khouribga">Khouribga</option>
-                <option value="Laayoune">Laayoune</option>
-                <option value="Larache">Larache</option>
-                <option value="Marrakech">Marrakech</option>
-                <option value="Meknes">Meknes</option>
-                <option value="Nador">Nador</option>
-                <option value="Ouarzazate">Ouarzazate</option>
-                <option value="Oujda">Oujda</option>
-                <option value="Rabat-Sale">Rabat-Sale</option>
-                <option value="Safi">Safi</option>
-                <option value="Settat">Settat</option>
-                <option value="Sidi Kacem">Sidi Kacem</option>
-                <option value="Tangier">Tangier</option>
-                <option value="Tan-Tan">Tan-Tan</option>
-                <option value="Taounate">Taounate</option>
-                <option value="Taroudannt">Taroudannt</option>
-                <option value="Tata">Tata</option>
-                <option value="Taza">Taza</option>
-                <option value="Tetouan">Tetouan</option>
-                <option value="Tiznit">Tiznit</option>
+    <div class="container">
+        <div class="row d-flex justify-content-center" style="margin-right: 0px;margin-top: -19px;">
+            <div class="col-md-6 col-xl-4">
+                <div class="card mb-5">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <div class="bs-icon-xl bs-icon-circle bs-icon-primary bs-icon my-4"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-person">
+                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"></path>
+                            </svg></div>
+                        <form class="text-center" method="post">
+                            <div class="mb-3"></div>
+                            <div class="mb-3"></div>
+                            <div class="mb-3"><input class="form-control" type="text" name="nom" placeholder="Nom"></div>
+                            <input class="form-control" type="text" name="prenom" placeholder="Prénom">
+                            <div class="mb-3"><input class="form-control" type="date" style="margin-top: 16px;" name="dateNaissance" value="Date Naissance"></div>
+                            <div class="mb-3"><select class="form-select" name="ville">
+                                    <option selected="">sélectionner votre ville</option>
+                                        <?php
+                                        $conn=Connection_DB::getConnection();
+                                        $sql = 'SELECT id,ville FROM ville ';
+                                        foreach ($conn->query($sql) as $row) {
+                                            echo "<option value=".$row['id'].">".$row['ville']."</option>" ;
+                                        }
+
+                                        ?>
+
+                                </select></div>
+                            <div class="mb-3"><input class="form-control" type="tel" name="phone" placeholder="Téléphone"></div>
+                            <div class="mb-3"><input class="form-control" type="text" name="cin" placeholder="Cin"></div>
+                            <div class="mb-3"> <input class="form-control" type="text" name="cne" placeholder="Cne"></div>
+                            <div class="mb-3"></div><input class="form-control" type="email" name="email" placeholder="Email">
+                            <div class="mb-3"></div><input class="form-control" type="password" name="password" placeholder="Mot de passe" style="margin-top: 15px;">
+                            <div class="mb-3"><button class="btn btn-primary shadow"  type="submit" name="signup" style="margin-top: 23px;">Créer Compte</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="/assets/js/bold-and-bright.js"></script>
+<script id="bs-live-reload" data-sseport="58637" data-lastchange="1669403171787" src="assets/js/livereload.js"></script>
 
 
-        </select>
-    </div>
-    <label for="dateNaissance" class="form-label">Date de naissance</label>
-    <div class="input-group mb-3">
-        <input type="date"  name="dateNaissance" class="form-control"  >
-    </div>
-    <label for='email' class="form-label">Email</label>
-    <div class="input-group mb-3">
-        <input type="email"  name='email' class="form-control"  >
-    </div>
-
-    <label for='phone' class="form-label">Phone</label>
-    <div class="input-group mb-3">
-        <input type="text"  name='phone' class="form-control"  >
-    </div>
-    <label for='password' class="form-label">Mot de Passe</label>
-    <div class="input-group mb-3">
-        <input type="password"  name='password' class="form-control"  >
-    </div>
-    <label for='passwordConfirmation' class="form-label">Confirmer Votre Mot de Passe</label>
-    <div class="input-group mb-3">
-        <input type="password"  name="passwordConfirmation" id='passwordConfirmation' class="form-control"  >
-    </div>
-        <button style="margin-left: 150px;margin-top: 30px" class="btn btn-primary btn-lg" name="signup" type="submit">Créer votre Compte</button>
-
-    </form>
-
-</div>
-
-</body>
-</html>
+</body></html>
 
