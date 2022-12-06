@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b11c7e0-5464-4d99-9adb-f769f9761aa6" name="Changes" comment="comm">
-      <change afterPath="$PROJECT_DIR$/filesUploaded/Img_638e8274e670c7.78050665photo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/filesUploaded/Img_638e9587e7c7b0.96806992317744629_540809037608160_1061837936234727052_n.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7cb9be4b-9a86-4c8a-9a54-bbe84886d330.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7cb9be4b-9a86-4c8a-9a54-bbe84886d330.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pdfGenerator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listeAdmis.php" beforeDir="false" afterPath="$PROJECT_DIR$/listeAdmis.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/candidatures.php" beforeDir="false" afterPath="$PROJECT_DIR$/candidatures.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/listeCandidatures.php" beforeDir="false" afterPath="$PROJECT_DIR$/listeCandidatures.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +119,10 @@
       <workItem from="1670160103391" duration="8656000" />
       <workItem from="1670174216479" duration="14072000" />
       <workItem from="1670233664508" duration="261000" />
-      <workItem from="1670277906909" duration="15300000" />
+      <workItem from="1670277906909" duration="15519000" />
+      <workItem from="1670329929193" duration="1742000" />
+      <workItem from="1670333873936" duration="659000" />
+      <workItem from="1670334686205" duration="3580000" />
     </task>
     <task id="LOCAL-00001" summary="comm">
       <created>1669405236120</created>
@@ -136,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670191900465</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="comm">
+      <created>1670295261358</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670295261358</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -130,13 +130,8 @@ $infoSet = $conn->query($sql);
                             $sql = "SELECT filiere FROM filiere where id= '$choix1';";
                             $choix2 = $row['idChoix2'];
                             $sql2 = "SELECT filiere FROM filiere where id= '$choix2';";
-                            foreach ($conn->query($sql) as $r) {
-                                $fil1 = $r['filiere'];
-                            }
-                            foreach ($conn->query($sql2) as $r) {
-                                $fil2 = $r['filiere'];
-                            }
-
+                            $fil1=$conn->query($sql)->fetch()['filiere'];
+                            $fil2=$conn->query($sql2)->fetch()['filiere'];
 
                             echo "<tr>
                             <td><img class='rounded-circle me-2' width='30' height='30' src='" . $row['photo'] . "'/> " . $row['nom'] . "</td>

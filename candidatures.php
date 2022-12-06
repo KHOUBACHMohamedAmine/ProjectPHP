@@ -95,8 +95,8 @@ if ($_SESSION['nbrCandidatures']==0) {
                 <button class="btn btn-danger btn-lg" type="submit"  name="deleteCandidature" style="transform: translate(514px);">Supprimer
                     candidature
                 </button>
-                <button class="btn btn-primary btn-lg" type="submit" name="printReçu"  style="transform: translate(514px);">Imprimer Reçu
-                </button>
+                <a class="btn btn-primary btn-lg" href="pdfGenerator.php"  style="transform: translate(514px);">Imprimer Reçu
+                </a>
             </h1>
 
         </div></form>
