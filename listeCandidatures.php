@@ -1,23 +1,51 @@
 <?php
 session_start();
 require("Connection_DB.php");
-$var=$_SESSION['currentAdminNom']." ".$_SESSION['currentAdminPrenom'];
+$var = $_SESSION['currentAdminNom'] . " " . $_SESSION['currentAdminPrenom'];
 
-if(isset($_POST["logout"])){
+if (isset($_POST["logout"])) {
     session_destroy();
     session_unset();
     header("location: adminLogin.php");
 }
-if ($var==NULL){
+if ($var == NULL) {
     header("location: adminLogin.php");
 }
-$sql="SELECT idEtudiant,note_regional,note_national,anneBac,id_choix1,id_choix2 FROM `candidature`";
-$conn=Connection_DB::getConnection();
-$stm=$conn->prepare($sql);
-$candidatures=$stm->execute();
+$conn = Connection_DB::getConnection();
 
 
+$sql = "SELECT candidature.candidature_numero as idCandidature,etudiant.cin as cin , etudiant.cne as cne,etudiant.idVille as idVille,etudiant.date_naissance as dateNaissance,candidature.note_regional as regional,candidature.note_national as national,candidature.id_choix1 as idChoix1,candidature.id_choix2 as idChoix2,ville.id as ville,ville.ville as  nomVille,candidature.id_type_bac as idBac,type_bac.type_bac as bac,etudiant.id as idEtudiant,etudiant.nom as nom,etudiant.prenom as prenom,candidature.idEtudiant as idEtudiant,document.chemin as photo
+FROM candidature INNER JOIN etudiant INNER JOIN ville INNER JOIN type_bac INNER JOIN document INNER JOIN categorie_document
+                                                                                                         ON etudiant.id = candidature.idEtudiant AND etudiant.idVille = ville.id AND candidature.id_type_bac = type_bac.id AND document.document_id = categorie_document.document_id AND document.idCandidature =etudiant.id
+WHERE categorie_document.document_id = 4 ";
 
+if (isset($_POST['gi'])) {
+
+
+    $sql = "SELECT candidature.candidature_numero as idCandidature,etudiant.cin as cin , etudiant.cne as cne,etudiant.idVille as idVille,etudiant.date_naissance as dateNaissance,candidature.note_regional as regional,candidature.note_national as national,candidature.id_choix1 as idChoix1,candidature.id_choix2 as idChoix2,ville.id as ville,ville.ville as  nomVille,candidature.id_type_bac as idBac,type_bac.type_bac as bac,etudiant.id as idEtudiant,etudiant.nom as nom,etudiant.prenom as prenom,candidature.idEtudiant as idEtudiant,document.chemin as photo
+FROM candidature INNER JOIN etudiant INNER JOIN ville INNER JOIN type_bac INNER JOIN document INNER JOIN categorie_document
+                                                                                                         ON etudiant.id = candidature.idEtudiant AND etudiant.idVille = ville.id AND candidature.id_type_bac = type_bac.id AND document.document_id = categorie_document.document_id AND document.idCandidature =etudiant.id
+WHERE categorie_document.document_id = 4  && candidature.id_choix1=1  ";
+
+} elseif (isset($_POST['tm'])) {
+
+    $sql = "SELECT candidature.candidature_numero as idCandidature,etudiant.cin as cin , etudiant.cne as cne,etudiant.idVille as idVille,etudiant.date_naissance as dateNaissance,candidature.note_regional as regional,candidature.note_national as national,candidature.id_choix1 as idChoix1,candidature.id_choix2 as idChoix2,ville.id as ville,ville.ville as  nomVille,candidature.id_type_bac as idBac,type_bac.type_bac as bac,etudiant.id as idEtudiant,etudiant.nom as nom,etudiant.prenom as prenom,candidature.idEtudiant as idEtudiant,document.chemin as photo
+FROM candidature INNER JOIN etudiant INNER JOIN ville INNER JOIN type_bac INNER JOIN document INNER JOIN categorie_document
+                                                                                                         ON etudiant.id = candidature.idEtudiant AND etudiant.idVille = ville.id AND candidature.id_type_bac = type_bac.id AND document.document_id = categorie_document.document_id AND document.idCandidature =etudiant.id
+WHERE categorie_document.document_id = 4  && candidature.id_choix1=2 ";
+} elseif (isset($_POST['timq'])) {
+    $sql = "SELECT candidature.candidature_numero as idCandidature,etudiant.cin as cin , etudiant.cne as cne,etudiant.idVille as idVille,etudiant.date_naissance as dateNaissance,candidature.note_regional as regional,candidature.note_national as national,candidature.id_choix1 as idChoix1,candidature.id_choix2 as idChoix2,ville.id as ville,ville.ville as  nomVille,candidature.id_type_bac as idBac,type_bac.type_bac as bac,etudiant.id as idEtudiant,etudiant.nom as nom,etudiant.prenom as prenom,candidature.idEtudiant as idEtudiant,document.chemin as photo
+FROM candidature INNER JOIN etudiant INNER JOIN ville INNER JOIN type_bac INNER JOIN document INNER JOIN categorie_document
+                                                                                                         ON etudiant.id = candidature.idEtudiant AND etudiant.idVille = ville.id AND candidature.id_type_bac = type_bac.id AND document.document_id = categorie_document.document_id AND document.idCandidature =etudiant.id
+WHERE categorie_document.document_id = 4  && candidature.id_choix1=3 ";
+} elseif (isset($_POST['gim'])) {
+    $sql = "SELECT candidature.candidature_numero as idCandidature,etudiant.cin as cin , etudiant.cne as cne,etudiant.idVille as idVille,etudiant.date_naissance as dateNaissance,candidature.note_regional as regional,candidature.note_national as national,candidature.id_choix1 as idChoix1,candidature.id_choix2 as idChoix2,ville.id as ville,ville.ville as  nomVille,candidature.id_type_bac as idBac,type_bac.type_bac as bac,etudiant.id as idEtudiant,etudiant.nom as nom,etudiant.prenom as prenom,candidature.idEtudiant as idEtudiant,document.chemin as photo
+FROM candidature INNER JOIN etudiant INNER JOIN ville INNER JOIN type_bac INNER JOIN document INNER JOIN categorie_document
+                                                                                                         ON etudiant.id = candidature.idEtudiant AND etudiant.idVille = ville.id AND candidature.id_type_bac = type_bac.id AND document.document_id = categorie_document.document_id AND document.idCandidature =etudiant.id
+WHERE categorie_document.document_id = 4  && candidature.id_choix1=4";
+}
+
+$infoSet = $conn->query($sql);
 
 
 ?>
@@ -40,26 +68,40 @@ $candidatures=$stm->execute();
 <body>
 <nav class="navbar navbar-light navbar-expand-md py-3">
     <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span
-                class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"
-                style="margin-left: 30px;"><img src="ESTS-LOGO-2021-NOUVEAU.png"
-                                                style="width: 100px;height: 100px;"></span></a>
+                    class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"
+                    style="margin-left: 30px;"><img src="ESTS-LOGO-2021-NOUVEAU.png"
+                                                    style="width: 100px;height: 100px;"></span></a>
         <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-3"><span
-                class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navcol-3">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item"><a class="nav-link " href="adminHome.php">Acceuil</a></li>
                 <li class="nav-item"><a class="nav-link active" href="#">Liste des candidatures</a></li>
                 <li class="nav-item"><a class="nav-link" href="listeAdmis.php">Liste des admis</a></li>
             </ul>
-            <?php echo $var?><form method="post" action=""> <button style="margin-left: 15px" class="btn btn-primary" name="logout" type="submit">Se Déconnecter</button></form>
+            <?php echo $var ?>
+            <form method="post" action="">
+                <button style="margin-left: 15px" class="btn btn-primary" name="logout" type="submit">Se Déconnecter
+                </button>
+            </form>
         </div>
     </div>
 </nav>
+
 <header class="bg-primary-gradient">
     <div class="container-fluid">
         <div class="card shadow mt-5">
             <div class="card-header py-3">
-                <p class="text-primary m-0 fw-bold"> Liste des candidatures</p>
+                <form method="post" action="">
+                    <p class="text-primary m-0 fw-bold"> Liste des candidatures
+                        <button type="submit" style="margin-left: 75%" name="gi" class="btn-primary btn">GI</button>
+                        <button class="btn-primary btn" type="submit" name="gim">GIM</button>
+                        <button class="btn-primary btn" type="submit" name="timq">TIMQ</button>
+                        <button class="btn-primary btn" type="submit" name="tm">TM</button>
+
+                    </p>
+                </form>
+
             </div>
             <div class="card-body">
 
@@ -81,211 +123,38 @@ $candidatures=$stm->execute();
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/photo.jpg" /> Khoubach</td>
-                            <td>Mohamed Amine</td>
-                            <td>JH66346</td>
-                            <td>D139462895</td>
-                            <td>Agadir</td>
-                            <td>2008/11/28</td>
-                            <td>Sciences math a</td>
-                            <td>12,87</td>
-                            <td>16</td>
-                            <td>TM</td>
-                            <td>GI</td>
-                        </tr><tr>
-                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/photo.jpg" /> Khoubach</td>
-                            <td>Mohamed Amine</td>
-                            <td>JH66346</td>
-                            <td>D139462895</td>
-                            <td>Agadir</td>
-                            <td>2008/11/28</td>
-                            <td>Sciences math a</td>
-                            <td>12,87</td>
-                            <td>16</td>
-                            <td>TM</td>
-                            <td>GI</td>
-                        </tr><tr>
-                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/photo.jpg" /> Khoubach</td>
-                            <td>Mohamed Amine</td>
-                            <td>JH66346</td>
-                            <td>D139462895</td>
-                            <td>Agadir</td>
-                            <td>2008/11/28</td>
-                            <td>Sciences math a</td>
-                            <td>12,87</td>
-                            <td>16</td>
-                            <td>TM</td>
-                            <td>GI</td>
-                        </tr><tr>
-                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/photo.jpg" /> Khoubach</td>
-                            <td>Mohamed Amine</td>
-                            <td>JH66346</td>
-                            <td>D139462895</td>
-                            <td>Agadir</td>
-                            <td>2008/11/28</td>
-                            <td>Sciences math a</td>
-                            <td>12,87</td>
-                            <td>16</td>
-                            <td>TM</td>
-                            <td>GI</td>
-                        </tr><tr>
-                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/photo.jpg" /> Khoubach</td>
-                            <td>Mohamed Amine</td>
-                            <td>JH66346</td>
-                            <td>D139462895</td>
-                            <td>Agadir</td>
-                            <td>2008/11/28</td>
-                            <td>Sciences math a</td>
-                            <td>12,87</td>
-                            <td>16</td>
-                            <td>TM</td>
-                            <td>GI</td>
-                        </tr><tr>
-                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/photo.jpg" /> Khoubach</td>
-                            <td>Mohamed Amine</td>
-                            <td>JH66346</td>
-                            <td>D139462895</td>
-                            <td>Agadir</td>
-                            <td>2008/11/28</td>
-                            <td>Sciences math a</td>
-                            <td>12,87</td>
-                            <td>16</td>
-                            <td>TM</td>
-                            <td>GI</td>
-                        </tr><tr>
-                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/photo.jpg" /> Khoubach</td>
-                            <td>Mohamed Amine</td>
-                            <td>JH66346</td>
-                            <td>D139462895</td>
-                            <td>Agadir</td>
-                            <td>2008/11/28</td>
-                            <td>Sciences math a</td>
-                            <td>12,87</td>
-                            <td>16</td>
-                            <td>TM</td>
-                            <td>GI</td>
-                        </tr><tr>
-                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/photo.jpg" /> Khoubach</td>
-                            <td>Mohamed Amine</td>
-                            <td>JH66346</td>
-                            <td>D139462895</td>
-                            <td>Agadir</td>
-                            <td>2008/11/28</td>
-                            <td>Sciences math a</td>
-                            <td>12,87</td>
-                            <td>16</td>
-                            <td>TM</td>
-                            <td>GI</td>
-                        </tr><tr>
-                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/photo.jpg" /> Khoubach</td>
-                            <td>Mohamed Amine</td>
-                            <td>JH66346</td>
-                            <td>D139462895</td>
-                            <td>Agadir</td>
-                            <td>2008/11/28</td>
-                            <td>Sciences math a</td>
-                            <td>12,87</td>
-                            <td>16</td>
-                            <td>TM</td>
-                            <td>GI</td>
-                        </tr><tr>
-                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/photo.jpg" /> Khoubach</td>
-                            <td>Mohamed Amine</td>
-                            <td>JH66346</td>
-                            <td>D139462895</td>
-                            <td>Agadir</td>
-                            <td>2008/11/28</td>
-                            <td>Sciences math a</td>
-                            <td>12,87</td>
-                            <td>16</td>
-                            <td>TM</td>
-                            <td>GI</td>
-                        </tr><tr>
-                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/photo.jpg" /> Khoubach</td>
-                            <td>Mohamed Amine</td>
-                            <td>JH66346</td>
-                            <td>D139462895</td>
-                            <td>Agadir</td>
-                            <td>2008/11/28</td>
-                            <td>Sciences math a</td>
-                            <td>12,87</td>
-                            <td>16</td>
-                            <td>TM</td>
-                            <td>GI</td>
-                        </tr><tr>
-                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/photo.jpg" /> Khoubach</td>
-                            <td>Mohamed Amine</td>
-                            <td>JH66346</td>
-                            <td>D139462895</td>
-                            <td>Agadir</td>
-                            <td>2008/11/28</td>
-                            <td>Sciences math a</td>
-                            <td>12,87</td>
-                            <td>16</td>
-                            <td>TM</td>
-                            <td>GI</td>
-                        </tr><tr>
-                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/photo.jpg" /> Khoubach</td>
-                            <td>Mohamed Amine</td>
-                            <td>JH66346</td>
-                            <td>D139462895</td>
-                            <td>Agadir</td>
-                            <td>2008/11/28</td>
-                            <td>Sciences math a</td>
-                            <td>12,87</td>
-                            <td>16</td>
-                            <td>TM</td>
-                            <td>GI</td>
-                        </tr><tr>
-                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/photo.jpg" /> Khoubach</td>
-                            <td>Mohamed Amine</td>
-                            <td>JH66346</td>
-                            <td>D139462895</td>
-                            <td>Agadir</td>
-                            <td>2008/11/28</td>
-                            <td>Sciences math a</td>
-                            <td>12,87</td>
-                            <td>16</td>
-                            <td>TM</td>
-                            <td>GI</td>
-                        </tr><tr>
-                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/photo.jpg" /> Khoubach</td>
-                            <td>Mohamed Amine</td>
-                            <td>JH66346</td>
-                            <td>D139462895</td>
-                            <td>Agadir</td>
-                            <td>2008/11/28</td>
-                            <td>Sciences math a</td>
-                            <td>12,87</td>
-                            <td>16</td>
-                            <td>TM</td>
-                            <td>GI</td>
-                        </tr><tr>
-                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/photo.jpg" /> Khoubach</td>
-                            <td>Mohamed Amine</td>
-                            <td>JH66346</td>
-                            <td>D139462895</td>
-                            <td>Agadir</td>
-                            <td>2008/11/28</td>
-                            <td>Sciences math a</td>
-                            <td>12,87</td>
-                            <td>16</td>
-                            <td>TM</td>
-                            <td>GI</td>
-                        </tr><tr>
-                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/photo.jpg" /> Khoubach</td>
-                            <td>Mohamed Amine</td>
-                            <td>JH66346</td>
-                            <td>D139462895</td>
-                            <td>Agadir</td>
-                            <td>2008/11/28</td>
-                            <td>Sciences math a</td>
-                            <td>12,87</td>
-                            <td>16</td>
-                            <td>TM</td>
-                            <td>GI</td>
-                        </tr>
+                        <?php
+                        foreach ($infoSet as $row) {
+                            $conn = Connection_DB::getConnection();
+                            $choix1 = $row['idChoix1'];
+                            $sql = "SELECT filiere FROM filiere where id= '$choix1';";
+                            $choix2 = $row['idChoix2'];
+                            $sql2 = "SELECT filiere FROM filiere where id= '$choix2';";
+                            foreach ($conn->query($sql) as $r) {
+                                $fil1 = $r['filiere'];
+                            }
+                            foreach ($conn->query($sql2) as $r) {
+                                $fil2 = $r['filiere'];
+                            }
+
+
+                            echo "<tr>
+                            <td><img class='rounded-circle me-2' width='30' height='30' src='" . $row['photo'] . "'/> " . $row['nom'] . "</td>
+                           
+                            <td>" . $row['prenom'] . "</td>
+                            <td>" . $row['cin'] . "</td>
+                            <td>" . $row['cne'] . "</td>
+                            <td>" . $row['nomVille'] . "</td>
+                            <td>" . $row['dateNaissance'] . "</td>
+                            <td>" . $row['bac'] . "</td>
+                            <td>" . $row['national'] . "</td>
+                            <td>" . $row['regional'] . "</td>
+                            <td>" . $fil1 . "</td>
+                            <td>" . $fil2 . "</td>
+                        </tr>";
+                        }
+
+                        ?>
                         </tbody>
 
                     </table>
@@ -296,8 +165,7 @@ $candidatures=$stm->execute();
     </div>
 
 
-
-    </header>
+</header>
 <footer class="text-center py-4">
     <div class="container">
         <div class="row row-cols-1 row-cols-lg-3">

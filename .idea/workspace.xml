@@ -5,91 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b11c7e0-5464-4d99-9adb-f769f9761aa6" name="Changes" comment="comm">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminHome.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminLogin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/Countdown-styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/Countdown.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/Footer-Clean-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/Navbar-With-Button-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/styles.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/photo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/Countdown-1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/Countdown.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/bold-and-bright.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets2/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets2/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets2/css/Countdown-styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets2/css/Countdown.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets2/css/Footer-Clean-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets2/css/Navbar-With-Button-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets2/img/brands/instacart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets2/img/brands/kickstarter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets2/img/brands/lyft.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets2/img/brands/pinterest.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets2/img/brands/shopify.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets2/img/brands/twitter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets2/img/products/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets2/img/products/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets2/img/products/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets2/img/team/avatar2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets2/img/team/avatar4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets2/img/team/avatar5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets2/js/Countdown-1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets2/js/Countdown.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets2/js/bold-and-bright.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-brands-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-brands-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-brands-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-regular-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-regular-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-regular-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-regular-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-solid-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-solid-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-solid-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/fonts/fa-solid-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/fonts/fontawesome-all.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/img/avatars/avatar1.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/img/avatars/avatar2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/img/avatars/avatar3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/img/avatars/avatar4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/img/avatars/avatar5.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/img/dogs/image2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/img/dogs/image3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/js/bs-init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/js/chart.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets3/js/theme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/candidatures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/listeAdmis.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/listeCandidatures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filesUploaded/Img_638e8274e670c7.78050665photo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filesUploaded/Img_638e9587e7c7b0.96806992317744629_540809037608160_1061837936234727052_n.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/7cb9be4b-9a86-4c8a-9a54-bbe84886d330.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7cb9be4b-9a86-4c8a-9a54-bbe84886d330.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Connection_DB.php" beforeDir="false" afterPath="$PROJECT_DIR$/Connection_DB.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Insertion.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/products/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/products/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/products/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets2/img/ESTS-LOGO-2021-NOUVEAU.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/team/avatar2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/team/avatar4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/team/avatar5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/backg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/listeAdmis.php" beforeDir="false" afterPath="$PROJECT_DIR$/listeAdmis.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listeCandidatures.php" beforeDir="false" afterPath="$PROJECT_DIR$/listeCandidatures.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +74,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -197,7 +118,9 @@
       <workItem from="1670034084203" duration="37000" />
       <workItem from="1670159960083" duration="96000" />
       <workItem from="1670160103391" duration="8656000" />
-      <workItem from="1670174216479" duration="13593000" />
+      <workItem from="1670174216479" duration="14072000" />
+      <workItem from="1670233664508" duration="261000" />
+      <workItem from="1670277906909" duration="15300000" />
     </task>
     <task id="LOCAL-00001" summary="comm">
       <created>1669405236120</created>
@@ -206,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669405236120</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="comm">
+      <created>1670191900465</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670191900465</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
