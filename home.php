@@ -18,7 +18,8 @@ if ($_SESSION['currentUserName']===NULL){
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
+    <title>Acceuil</title>
+    <link rel="icon" href="ESTS-LOGO-2021-NOUVEAU.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="script" href="assets/js/script.min.js">
     <link rel="stylesheet" href="assets/css/Countdown-styles.css">
@@ -40,9 +41,9 @@ if ($_SESSION['currentUserName']===NULL){
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item"><a class="nav-link active" href="#">Acceuil</a></li>
                 <li class="nav-item"><a class="nav-link" href="profile.php">Mon Profil</a></li>
-                <li class="nav-item"><a class="nav-link" href="candidatures.php">Mes Candidatures</a></li>
+                <li class="nav-item"><a class="nav-link" href="candidatures.php">Ma Candidature</a></li>
             </ul>
-            <?php echo $var?><form method="post" action=""> <button style="margin-left: 15px" class="btn btn-primary" name="logout" type="submit">Se Déconnecter</button></form>
+            <?php echo $_SESSION['currentUserNom']." ".$_SESSION['currentUserPrenom']?><form method="post" action=""> <button style="margin-left: 15px" class="btn btn-primary" name="logout" type="submit">Se Déconnecter</button></form>
         </div>
     </div>
 </nav>
@@ -55,76 +56,103 @@ if ($_SESSION['currentUserName']===NULL){
                         Pré-Inscriptions de l'EST Safi</h1></div>
             </div>
             <section class="py-4 py-xl-5">
-                <div class="container py-4 py-xl-5" style="border-top-style: solid;border-top-color: var(--bs-blue);border-bottom-style: solid;border-bottom-color: var(--bs-blue);">
+                <div class="container py-4 py-xl-5" style="border-top:2px solid rgb(0, 128, 255) ">
                     <div class="row mb-5">
                         <div class="col-md-8 col-xl-6 text-center mx-auto">
-                            <h2>Filières de L'EST</h2>
+                            <h2>Filières de l&#39;EST SAFI</h2>
+                            <p class="w-lg-50"><span style="color: rgb(0, 128, 255);">Vous pouvez choisir deux filières parmi nos filières suivantes : </span></p>
                         </div>
                     </div>
                     <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
-                        <div class="col" style="border-radius: 17px;border-width: 1px;border-style: none;background: var(--bs-white);">
-                            <div class="text-center d-flex flex-column align-items-center align-items-xl-center" style="color: var(--bs-blue);">
-                                <div class="px-3" style="margin-top: 27px;">
-                                    <h4 style="margin-top: 2px;">DUT Génie Informatique</h4>
-                                    <p></p>
+                        <div class="col">
+                            <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="dutGi.png" />
+                                <div class="card-body p-4">
+                                    <p class="text-primary card-text mb-0"></p>
+                                    <h4 class="card-title"><span style="color: rgb(13, 110, 253);">Génie Informatique</span></h4>
+                                    <p class="card-text"><span style="color: rgb(119, 119, 119);">Ensemble des métiers qui sont basés d’un côté sur le matériel (micro ordinateur, serveur, postes fixes, réseaux, portables, équipements au sens large …) et de l’autre, sur les logiciels, les systèmes d’exploitation, l’ingénierie des logiciels et les applications personnalisées.</span><br /></p>
+                                    <div class="d-flex">
+                                        <div>
+                                            <a class="text-muted" href="https://www.ests.uca.ma/?page_id=46" ><p class="text-muted mb-0"><span style="color: rgb(1, 135, 255);">Lire Plus</span><br /></p></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
-                            <div class="text-center d-flex flex-column align-items-center align-items-xl-center">
-                                <div class="px-3" style="background: var(--bs-white);border-radius: 17px;height: 94.2897px;">
-                                    <h4 style="color: var(--bs-blue);margin-top: 29px;">DUT Management de Qualité</h4>
-                                    <p></p>
+                            <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="dutTIMQ.png" />
+                                <div class="card-body p-4">
+                                    <h4 class="card-title"><span style="color: var(--bs-blue);">Management de Qualité</span><br /></h4>
+                                    <p class="card-text"><span style="color: rgb(119, 119, 119);">Dans  les  activités professionnelles,   toute la hiérarchie vise la meilleure qualité des produits fabriqués, des équipements livrés et des services rendus.Cette approche exige des audits « qualité », une maitrise de toute la chaine de mesures, des enquêtes.</span><br /></p>
+                                    <div class="d-flex">
+                                        <div>
+                                            <a class="text-muted" href="https://www.ests.uca.ma/?page_id=46" ><p class="text-muted mb-0"><span style="color: rgb(1, 135, 255);">Lire Plus</span><br /></p></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xxl-4" style="background: var(--bs-white);border-radius: 17px;">
-                            <div class="text-center d-flex flex-column align-items-center align-items-xl-center">
-                                <div class="px-3" style="margin-top: 29px;height: 29.7897px;">
-                                    <h4 style="margin-bottom: 45px;color: var(--bs-blue);">DUT Génie Industriel&nbsp;</h4>
+                        <div class="col">
+                            <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="dutGim.png" />
+                                <div class="card-body p-4">
+                                    <h4 class="card-title"><span style="color: var(--bs-blue);">Génie Industriel et Maintenance</span><br /></h4>
+                                    <h4 class="card-title"></h4>
+                                    <p class="card-text"><span style="color: rgb(119, 119, 119);">La maintenance est une fonction primordiale qui exige des professionnels de haut niveau capables d’intervenir urgemment lors des réparations ou au contraire préventivement en suivant les consignes données par les constructeurs évitant ainsi les arrêts prolongés</span><br /></p>
+                                    <div class="d-flex">
+                                        <div>
+                                            <a class="text-muted" href="https://www.ests.uca.ma/?page_id=46" ><p class="text-muted mb-0"><span style="color: rgb(1, 135, 255);">Lire Plus</span><br /></p></a>
+
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col" style="margin-left: 403px;margin-top: 41px;border-color: var(--bs-body-bg);border-radius: 17px;background: var(--bs-white);width: 332px;">
-                            <div class="text-center d-flex flex-column align-items-center align-items-xl-center">
-                                <div class="px-3" style="margin-left: 0px;">
-                                    <h4 style="margin-bottom: 28px;color: var(--bs-blue);margin-top: 24px;">DUT Techniques de Management</h4>
+                        <div class="col offset-xxl-4">
+                            <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="dutTM.png" />
+                                <div class="card-body p-4">
+                                    <p class="text-primary card-text mb-0"></p>
+                                    <h4 class="card-title"><span style="color: rgb(13, 110, 253);">Techniques de Management</span></h4>
+                                    <p class="card-text"><span style="color: rgb(119, 119, 119);">Le management, dans le domaine des entreprises, consiste après avoir procédé aux études des situations et des besoins de services sur les plans commercial, administratif, productif…, à faire des choix d’ordre financier mais aussi, d’investissements.</span><br /></p>
+                                    <div class="d-flex">
+                                        <div>
+                                            <a class="text-muted" href="https://www.ests.uca.ma/?page_id=46" ><p class="text-muted mb-0"><span style="color: rgb(1, 135, 255);">Lire Plus</span><br /></p></a>
+
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <p class="text-center w-lg-50" style="color: var(--bs-green);margin-top: 64px;">NB: Vous Pouvez candidater à 2 filières max , la présélection est basée sur vos moyennes et filières .&nbsp;</p>
                 </div>
             </section>
         </div>
     </div>
     <section class="py-4 py-xl-5">
-        <div class="container py-4 py-xl-5" style="height: 656.728px;border-bottom-style: solid;border-bottom-color: var(--bs-blue);">
+        <div class="container py-4 py-xl-5" style="height: 500px;border-bottom: 2px solid var(--bs-blue);border-top: 2px solid var(--bs-blue);">
             <div class="row mb-5">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <h2>Clôture de Candidatures Dans</h2>
+                    <h2 >Clôture de Candidatures Dans</h2>
                 </div>
-            </div><div class="d-flex justify-content-center countdown" data-count="2022/12/31">
-                <div style="border-top-style: none;">
-                    <h3>%d</h3>
+            </div><div class="d-flex justify-content-center countdown"  data-count="2022/12/08">
+                <div >
+                    <h3 class="text-danger">%d</h3>
                     <h4>Jours</h4>
                 </div>
-                <div style="border-top-style: none;">
-                    <h3>%h</h3>
+                <div >
+                    <h3 class="text-danger">%h</h3>
                     <h4>Heures</h4>
                 </div>
-                <div style="border-top-style: none;">
-                    <h3>%m</h3>
+                <div>
+                    <h3 class="text-danger">%m</h3>
                     <h4>Minutes</h4>
                 </div>
-                <div style="border-top-style: none;">
-                    <h3>%s</h3>
+                <div >
+                    <h3 class="text-danger">%s</h3>
                     <h4>Seconds</h4>
                 </div>
             </div>
-            <p class="text-center w-lg-50" style="color: var(--bs-red);margin-top: 64px;">Date d'affichage des listes de Pré-selections : le 20/10/2022</p>
-            <p class="text-center w-lg-50" style="color: var(--bs-red);margin-top: 6px;">Date de concours : le 27/10/2022</p>
-            <p class="text-center w-lg-50" style="color: var(--bs-red);margin-top: 6px;">Date de résultats de concours : le 30/10/2022</p>
+            <p class="text-primary text-center h3" style="margin-top: 64px;">Date d'affichage des listes de Pré-selections : le 20/10/2022</p>
+            <p class="text-primary text-center h3" style="margin-top: 6px;">Date de concours : le 27/10/2022</p>
+            <p class="text-primary text-center h3" style="margin-top: 6px;">Date de résultats de concours : le 30/10/2022</p>
 
         </div>
     </section>
@@ -182,7 +210,7 @@ if ($_SESSION['currentUserName']===NULL){
                             </svg>
                         </div>
                         <div class="px-2"><h6 class="fw-bold mb-0">Adresse de l'école</h6>
-                            <p class="text-muted mb-0">12 Example Street</p></div>
+                            <p class="text-muted mb-0">Route Dar Si-Aïssa Echahid Mbarek El Mokhtar, Safi</p></div>
                     </div>
                 </div>
             </div>

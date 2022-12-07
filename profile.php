@@ -21,7 +21,7 @@ if (isset($_POST["editInfoPerso"])) {
         $cne = $_POST['cne'];
         $id = $_SESSION['currentUserId'];
         $conn = Connection_DB::getConnection();
-        $sql = "UPDATE etudiant SET nom='$nom',idVille='$idVille',prenom='$prenom',date_naissance='$date_naissance',cin='$cin',cne='$cin' WHERE id=$id";
+        $sql = "UPDATE etudiant SET nom='$nom',idVille='$idVille',prenom='$prenom',date_naissance='$date_naissance',cin='$cin',cne='$cne' WHERE id=$id";
         $stm = $conn->prepare($sql);
         $stm->execute();
         header("location: profile.php");
@@ -118,7 +118,8 @@ foreach ($currentUserFiles as $row) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
+    <title>Profile</title>
+    <link rel="icon" href="ESTS-LOGO-2021-NOUVEAU.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="script" href="assets/js/script.min.js">
     <link rel="stylesheet"
@@ -130,7 +131,7 @@ foreach ($currentUserFiles as $row) {
 </head>
 <body>
 <nav class="navbar navbar-light navbar-expand-md py-3">
-    <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span
+    <div class="container"><a class="navbar-brand d-flex align-items-center" href="home.php"><span
                     class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"
                     style="margin-left: 30px;"><img src="ESTS-LOGO-2021-NOUVEAU.png"
                                                     style="width: 100px;height: 100px;"></span></a>
@@ -140,7 +141,7 @@ foreach ($currentUserFiles as $row) {
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item"><a class="nav-link " href="home.php">Acceuil</a></li>
                 <li class="nav-item"><a class="nav-link active" href="#">Mon Profil</a></li>
-                <li class="nav-item"><a class="nav-link" href="candidatures.php">Mes Candidatures</a></li>
+                <li class="nav-item"><a class="nav-link" href="candidatures.php">Ma Candidature</a></li>
             </ul>
             <?php echo $var ?>
             <form method="post" action="">

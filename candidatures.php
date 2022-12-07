@@ -51,7 +51,8 @@ if ($_SESSION['nbrCandidatures']==0) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
+    <title>Candidature</title>
+    <link rel="icon" href="ESTS-LOGO-2021-NOUVEAU.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="script" href="assets/js/script.min.js">
     <link rel="stylesheet" href="assets/css/Countdown-styles.css">
@@ -63,7 +64,7 @@ if ($_SESSION['nbrCandidatures']==0) {
 </head>
 <body>
 <nav class="navbar navbar-light navbar-expand-md py-3">
-    <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span
+    <div class="container"><a class="navbar-brand d-flex align-items-center" href="home.php"><span
                     class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"
                     style="margin-left: 30px;"><img src="ESTS-LOGO-2021-NOUVEAU.png"
                                                     style="width: 100px;height: 100px;"></span></a>
@@ -73,9 +74,9 @@ if ($_SESSION['nbrCandidatures']==0) {
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item"><a class="nav-link " href="home.php">Acceuil</a></li>
                 <li class="nav-item"><a class="nav-link " href="profile.php">Mon Profil</a></li>
-                <li class="nav-item"><a class="nav-link active" href="#">Mes Candidatures</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Ma Candidature</a></li>
             </ul>
-            <?php echo $var ?>
+            <?php echo $_SESSION['currentUserNom']." ".$_SESSION['currentUserPrenom'] ?>
             <form method="post" action="">
                 <button style="margin-left: 15px" class="btn btn-primary" name="logout" type="submit">Se Déconnecter</button>
             </form>

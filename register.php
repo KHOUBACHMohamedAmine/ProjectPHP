@@ -18,7 +18,14 @@ if(isset($_POST["signup"])){
         $stm=$conn->prepare("INSERT INTO `etudiant` (`id`, `nom`, `prenom`, `idVille`, `email`, `password`, `date_naissance`, `num_tel`, `cin` , `cne`) VALUES (null , ?, ?, ?, ?, ?, ?, ? , ? , ?);");
         $res=$stm->execute([$nom,$prenom,$ville,$email,$password,$dateNaissance,$phone,$cin,$cne]);
         if ($res){
-            $_SESSION['currentUserName']=$nom.$prenom;
+            $_SESSION['currentUserName']= $_POST['nom'];
+            $_SESSION['currentUserNom']= $_POST['nom'];
+            $_SESSION['currentUserId']= $_POST['id'];
+            $_SESSION['currentUserPrenom']= $_POST['prenom'];
+            $_SESSION['currentUserVille']= $_POST['idVille'];
+            $_SESSION['currentUserDateNaissance']= $_POST['date_naissance'];
+            $_SESSION['currentUserCin']= $_POST['cin'];
+            $_SESSION['currentUserCne']= $_POST['cne'];
             header("Location: Home.php");
         }else{
             echo "Erreur de création de votre compte";

@@ -22,8 +22,8 @@ $pdf = new FPDF('P', 'mm', 'A5');
 $pdf->AddPage();
 
 // Début en police Arial normale taille 10
-$pdf->Image('ESTS-LOGO-2021-NOUVEAU.png',5,-5,40);
-$pdf->Image('cadiayaad.png',125,5,15);
+$pdf->Image('ESTS-LOGO-2021-NOUVEAU.png',50,-5,40);
+
 
 $pdf->Ln(18);
 $pdf->SetFont('Arial', '', 10);

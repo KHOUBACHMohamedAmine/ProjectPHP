@@ -1,6 +1,7 @@
 <?php
 session_start();
 require("Connection_DB.php");
+$conn=Connection_DB::getConnection();
 $var=$_SESSION['currentAdminNom']." ".$_SESSION['currentAdminPrenom'];
 
 if(isset($_POST["logout"])){
@@ -17,7 +18,7 @@ $serieBac = $_POST["serieBac"];
 $filiereDut= $_POST["filiereDut"];
 $coeff= $_POST["coeff"];
 
-    $conn=Connection_DB::getConnection();
+
     $stm=$conn->prepare("INSERT INTO `facteurs`(`id_type_bac`, `id_filiere`, `facteur`) VALUES (?,?,?);");
     $res=$stm->execute([$serieBac,$filiereDut,$coeff]);
     if ($res){
@@ -28,6 +29,9 @@ $coeff= $_POST["coeff"];
 
 
 }
+$stmt = $conn->prepare("SELECT `deadline`, `affichage_Pres`, `date_Cnc`, `date_Result` FROM `config` WHERE id=1; ");
+$stmt->execute();
+$currentConfiguration = $stmt->fetch();
 if(isset($_POST["editConfig"])){
 
     $deadline = $_POST["dealine"];
@@ -45,7 +49,7 @@ if(isset($_POST["editConfig"])){
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Espace Admin </title>
+    <title>Espace Admin</title>
     <link rel="icon" href="ESTS-LOGO-2021-NOUVEAU.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="script" href="assets/js/script.min.js">
@@ -210,7 +214,7 @@ if(isset($_POST["editConfig"])){
                                 <div class="col">
                                     <div class="card shadow mb-3">
                                         <div class="card-header py-3">
-                                            <p class="text-primary m-0 fw-bold">Configuration de base :</p>
+                                            <p class="text-primary m-0 fw-bold">Configuration des dates :</p>
 
                                         </div>
                                         <div class="card-body" >
@@ -218,40 +222,32 @@ if(isset($_POST["editConfig"])){
                                                 <div class="row">
                                                     <div class="col">
                                                         <div class="mb-3"><label class="form-label" for="dateCloture"><strong>Date Cloture</strong><br></label><input
-                                                                    class="form-control" type="date" id="dateCloture"  name="dateCloture" ></div>
+                                                                    class="form-control" type="date" id="dateCloture"  value="<?php echo $currentConfiguration['deadline']?>" name="dateCloture" ></div>
                                                     </div>
                                                     <div class="col">
-                                                        <div class="mb-3"><label class="form-label" for="filiere"><strong>Ajouter Filiere</strong><br></label><input
-                                                                    class="form-control" type="text" id="filiere"  name="filiere"></div>
+                                                        <div class="mb-3"><label class="form-label" for="affichageResultat"><strong>Date d'affichage des resultats</strong><br></label><input
+                                                                    class="form-control" type="date" id="affichageResultat" value="<?php echo $currentConfiguration['date_Result']?>"  name="affichageResultat"></div>
                                                     </div>
+
                                                 </div>
 
                                                 <div class="row">
                                                     <div class="col">
-                                                        <div class="mb-3"><label class="form-label" for="nbrMaxAdmissionsGI"><strong>Nombre Max d'admissions GI</strong><br></label><input
-                                                                    class="form-control" type="text" id="nbrMaxAdmissionsGI"  name="nbrMaxAdmissionsGI"></div>
+                                                        <div class="mb-3"><label class="form-label" for="preselection"><strong>Date d'affichage des présélectionnés</strong><br></label><input
+                                                                    class="form-control" type="date" id="preselection" value="<?php echo $currentConfiguration['affichage_Pres']?>" name="preselection"></div>
                                                     </div>
                                                     <div class="col">
-                                                        <div class="mb-3"><label class="form-label" for="nbrMaxAdmissionsTIMQ"><strong>Nombre Max d'admissions TIMQ</strong><br></label><input
-                                                                    class="form-control" type="text" id="nbrMaxAdmissionsTIMQ"  name="nbrMaxAdmissionsTIMQ"></div>
+                                                        <div class="mb-3"><label class="form-label" for="concours"><strong>Date du concours </strong><br></label><input
+                                                                    class="form-control" type="date" id="concours" value="<?php echo $currentConfiguration['date_Cnc']?>"  name="concours"></div>
                                                     </div>
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <div class="mb-3"><label class="form-label" for="nbrMaxAdmissionsTM"><strong>Nombre Max d'admissions TM</strong><br></label><input
-                                                                    class="form-control" type="text" id="nbrMaxAdmissionsTM"  name="nbrMaxAdmissionsTM"></div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <div class="mb-3"><label class="form-label" for="nbrMaxAdmissionsGIM"><strong>Nombre Max d'admissions GIM</strong><br></label><input
-                                                                    class="form-control" type="text" id="nbrMaxAdmissionsGIM"  name="nbrMaxAdmissionsGIM"></div>
-                                                    </div>
-                                                </div>
+
 
                                     </div>
 
                                                 </div>
 
-                                                <button type="submit" class="btn btn-primary" name="editConfig" >Modifier Configurations</button>
+                                                <button type="submit" class="btn btn-primary" name="editConfig" >Modifier Dates</button>
 
                                         </div>
 
@@ -260,6 +256,41 @@ if(isset($_POST["editConfig"])){
                             </div>
 
                         </div>
+                    <div class="row mb-5 " >
+                        <div class="col-lg-8">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="card shadow mb-3">
+                                        <div class="card-header py-3">
+                                            <p class="text-primary m-0 fw-bold"> Ajout de filières :</p>
+
+                                        </div>
+                                        <div class="card-body" >
+
+
+
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="mb-3"><label class="form-label" for="filiere"><strong>intitulé de filière à ajouter </strong><br></label><input
+                                                                class="form-control" type="text" id="filiere"  name="filiere"></div>
+                                                </div>
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary" name="editConfig" >Ajouter</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
                     <div class="col-lg-8">
 
                         <div class="row">

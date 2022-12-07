@@ -55,7 +55,8 @@ catch(PDOException $error)
 <html lang="en" style="position: sticky;"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home</title>
+    <title>Connexion</title>
+    <link rel="icon" href="ESTS-LOGO-2021-NOUVEAU.png">
     <link rel="stylesheet" href="assets2/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets2/css/Navbar-With-Button-icons.css">
 

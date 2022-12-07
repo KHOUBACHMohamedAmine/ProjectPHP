@@ -25,24 +25,24 @@ if (isset($_POST['gi'])) {
     $sql = "SELECT candidature.candidature_numero as idCandidature,etudiant.cin as cin , etudiant.cne as cne,etudiant.idVille as idVille,etudiant.date_naissance as dateNaissance,candidature.note_regional as regional,candidature.note_national as national,candidature.id_choix1 as idChoix1,candidature.id_choix2 as idChoix2,ville.id as ville,ville.ville as  nomVille,candidature.id_type_bac as idBac,type_bac.type_bac as bac,etudiant.id as idEtudiant,etudiant.nom as nom,etudiant.prenom as prenom,candidature.idEtudiant as idEtudiant,document.chemin as photo
 FROM candidature INNER JOIN etudiant INNER JOIN ville INNER JOIN type_bac INNER JOIN document INNER JOIN categorie_document
                                                                                                          ON etudiant.id = candidature.idEtudiant AND etudiant.idVille = ville.id AND candidature.id_type_bac = type_bac.id AND document.document_id = categorie_document.document_id AND document.idCandidature =etudiant.id
-WHERE categorie_document.document_id = 4  && candidature.id_choix1=1  ";
+WHERE categorie_document.document_id = 4  && (candidature.id_choix1=1 or candidature.id_choix2=1) ";
 
 } elseif (isset($_POST['tm'])) {
 
     $sql = "SELECT candidature.candidature_numero as idCandidature,etudiant.cin as cin , etudiant.cne as cne,etudiant.idVille as idVille,etudiant.date_naissance as dateNaissance,candidature.note_regional as regional,candidature.note_national as national,candidature.id_choix1 as idChoix1,candidature.id_choix2 as idChoix2,ville.id as ville,ville.ville as  nomVille,candidature.id_type_bac as idBac,type_bac.type_bac as bac,etudiant.id as idEtudiant,etudiant.nom as nom,etudiant.prenom as prenom,candidature.idEtudiant as idEtudiant,document.chemin as photo
 FROM candidature INNER JOIN etudiant INNER JOIN ville INNER JOIN type_bac INNER JOIN document INNER JOIN categorie_document
                                                                                                          ON etudiant.id = candidature.idEtudiant AND etudiant.idVille = ville.id AND candidature.id_type_bac = type_bac.id AND document.document_id = categorie_document.document_id AND document.idCandidature =etudiant.id
-WHERE categorie_document.document_id = 4  && candidature.id_choix1=2 ";
+WHERE categorie_document.document_id = 4  && (candidature.id_choix1=2 or candidature.id_choix2=2) ";
 } elseif (isset($_POST['timq'])) {
     $sql = "SELECT candidature.candidature_numero as idCandidature,etudiant.cin as cin , etudiant.cne as cne,etudiant.idVille as idVille,etudiant.date_naissance as dateNaissance,candidature.note_regional as regional,candidature.note_national as national,candidature.id_choix1 as idChoix1,candidature.id_choix2 as idChoix2,ville.id as ville,ville.ville as  nomVille,candidature.id_type_bac as idBac,type_bac.type_bac as bac,etudiant.id as idEtudiant,etudiant.nom as nom,etudiant.prenom as prenom,candidature.idEtudiant as idEtudiant,document.chemin as photo
 FROM candidature INNER JOIN etudiant INNER JOIN ville INNER JOIN type_bac INNER JOIN document INNER JOIN categorie_document
                                                                                                          ON etudiant.id = candidature.idEtudiant AND etudiant.idVille = ville.id AND candidature.id_type_bac = type_bac.id AND document.document_id = categorie_document.document_id AND document.idCandidature =etudiant.id
-WHERE categorie_document.document_id = 4  && candidature.id_choix1=3 ";
+WHERE categorie_document.document_id = 4  && (candidature.id_choix1=3 or candidature.id_choix2=3)";
 } elseif (isset($_POST['gim'])) {
     $sql = "SELECT candidature.candidature_numero as idCandidature,etudiant.cin as cin , etudiant.cne as cne,etudiant.idVille as idVille,etudiant.date_naissance as dateNaissance,candidature.note_regional as regional,candidature.note_national as national,candidature.id_choix1 as idChoix1,candidature.id_choix2 as idChoix2,ville.id as ville,ville.ville as  nomVille,candidature.id_type_bac as idBac,type_bac.type_bac as bac,etudiant.id as idEtudiant,etudiant.nom as nom,etudiant.prenom as prenom,candidature.idEtudiant as idEtudiant,document.chemin as photo
 FROM candidature INNER JOIN etudiant INNER JOIN ville INNER JOIN type_bac INNER JOIN document INNER JOIN categorie_document
                                                                                                          ON etudiant.id = candidature.idEtudiant AND etudiant.idVille = ville.id AND candidature.id_type_bac = type_bac.id AND document.document_id = categorie_document.document_id AND document.idCandidature =etudiant.id
-WHERE categorie_document.document_id = 4  && candidature.id_choix1=4";
+WHERE categorie_document.document_id = 4  && (candidature.id_choix1=4 or candidature.id_choix2=4)";
 }
 
 $infoSet = $conn->query($sql);
@@ -54,7 +54,7 @@ $infoSet = $conn->query($sql);
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Espace Admin </title>
+    <title>Espace Admin - Liste Candidatures</title>
     <link rel="icon" href="ESTS-LOGO-2021-NOUVEAU.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="script" href="assets/js/script.min.js">
